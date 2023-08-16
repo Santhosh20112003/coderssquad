@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DCE CODER SQUAD</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+            *{
+                font-family: 'Josefin Sans', sans-serif;
+            }
+            body{
+                background-color: #63c29c;
+                height: 100vh;
+                
+            }
+            #preloader{
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	background: #101010 url("https://i.pinimg.com/originals/05/cb/41/05cb41dd40c1045ef47ee2be34147c79.gif") no-repeat center center;
+	background-size: 20%;
+}
+        </style>   
+    </head>
+        <body>
+
+            <div id="preloader">
+    
+            </div>
+
+            <div class="container">
+                <div id="autocomplete"></div>
+              </div>
+         <div class="w-100 d-flex align-items-center justify-content-between" style="height: 100px;background-color: #002d59;z-index: 10;border-bottom: 1px solid rgba(255, 255, 255, 0.637);"> 
+            <div class=" d-flex align-items-center justify-content-start ps-5" style="width: 30%;" >
+                <h2  class="text-white">
+                    Coder's Squad
+                </h2>
+            </div>
+                <div class=" d-flex align-items-center justify-content-center gap-3" style="width: 30%;" >
+                    <a href="/main" id="auth" class=" btn btn-outline-warning">sign-in</a>
+                    <a href="/main" class="btn btn-primary">sign-up</a>
+                </div> 
+            </div>
+    <div class="d-flex align-items-center justify-content-center flex-column gap-3" style="height: 600px;background: rgb(0,45,89);
+    background: linear-gradient(180deg, rgba(0,45,89,1) 0%, rgba(99,194,156,1) 100%);">             
+    <div class="d-flex gap-2 align-items-center justify-content-center flex-column" >       
+         <img src="/img/logo.png" alt="Dce coders logo" widt    h="250" height="250">
+              
+                <h2 style="color: rgb(255, 255, 255);">
+                    Welcome to Coder's Squad
+                </h2>
+                <p class="lead fs-5 fw-bold" style="color: rgb(255, 255, 255)">
+                   Change the world with a click
+                   </p>
+              </div>
+           <div class="d-flex align-items-center justify-content-center ">
+               <a class="btn btn-primary btn-lg" href="/main">
+                    Get Started
+                </a>
+             
+           </div>
+        </div>
+        </body>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" integrity="sha512-zKaK6G2LZC5YZTX0vKmD7xOwd1zrEEMal4zlTf5Ved/A1RrnW+qt8pWDfo7oz+xeChECS/P9dv6EDwwPwelFfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var loader = document.getElementById("preloader");
+	 addEventListener('load',()=>{
+		loader.style.display ='none';
+	 });
+        </script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+        <script src="/index.js"></script>
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/63da9660474251287910eefa/1go6tmqtb';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+            </script>
+            <script>
+   
+  var typed3 = new Typed('.lead', {
+    strings: ['Developing Developers', 'Oppurtunity for Tomorrow', 'Discipline , Character and Education','Developing Developers'],
+    typeSpeed: 80,
+    backSpeed: 80,
+    cursorChar: "",
+    smartBackspace: true, 
+    loop: true
+  });
+            </script>
+          
+
+</html>
+
