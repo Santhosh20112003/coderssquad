@@ -4,13 +4,15 @@
         <title>DCE CODER SQUAD</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../assests/img/logo.png" type="image/x-icon">
+
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
             *{
                 font-family: 'Josefin Sans', sans-serif;
             }
             body{
-                background-color: #63c29c;
+                
                 height: 100vh;
                 
             }
@@ -21,48 +23,59 @@
 	z-index: 100;
 	background: #101010 url("https://i.pinimg.com/originals/05/cb/41/05cb41dd40c1045ef47ee2be34147c79.gif") no-repeat center center;
 	background-size: 20%;
-}
+           }
+
+    @media (min-width:320px) and (max-width:480px) {
+        .logo-img{
+            height: 80%;
+            width: 80%;
+        }
+    }
+
+
         </style>   
     </head>
+    
         <body>
 
             <div id="preloader">
     
             </div>
 
-            <div class="container">
-                <div id="autocomplete"></div>
-              </div>
-         <div class="w-100 d-flex align-items-center justify-content-between" style="height: 100px;background-color: #002d59;z-index: 10;border-bottom: 1px solid rgba(255, 255, 255, 0.637);"> 
-            <div class=" d-flex align-items-center justify-content-start ps-5" style="width: 30%;" >
-                <h2  class="text-white">
-                    Coder's Squad
-                </h2>
+    <div class="" style="width: 100%;height: 100vh;">
+
+        <nav class="navbar" style="min-height:5vh;background-color: #212121;">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#">
+                Coders Squad
+              </a>
+              <div class="navbar-text">
+                <a href="/main" class="btn btn-info">Login</a>
+                <a href="/main" class="btn btn-outline-primary">Signup</a>
             </div>
-                <div class=" d-flex align-items-center justify-content-center gap-3" style="width: 30%;" >
-                    <a href="/main" id="auth" class=" btn btn-outline-warning">sign-in</a>
-                    <a href="/main" class="btn btn-primary">sign-up</a>
-                </div> 
             </div>
-    <div class="d-flex align-items-center justify-content-center flex-column gap-3" style="height: 600px;background: rgb(0,45,89);
-    background: linear-gradient(180deg, rgba(0,45,89,1) 0%, rgba(99,194,156,1) 100%);">             
-    <div class="d-flex gap-2 align-items-center justify-content-center flex-column" >       
-         <img src="/img/logo.png" alt="Dce coders logo" widt    h="250" height="250">
-              
-                <h2 style="color: rgb(255, 255, 255);">
-                    Welcome to Coder's Squad
-                </h2>
-                <p class="lead fs-5 fw-bold" style="color: rgb(255, 255, 255)">
-                   Change the world with a click
-                   </p>
-              </div>
-           <div class="d-flex align-items-center justify-content-center ">
-               <a class="btn btn-primary btn-lg" href="/main">
-                    Get Started
-                </a>
-             
-           </div>
-        </div>
+          </nav>
+<div class="d-flex align-items-center justify-content-center flex-column gap-3" style="height: 90vh;background: #63c29c;">             
+<div class="d-flex gap-2 align-items-center justify-content-center flex-column" >       
+     <img src="/img/logo.png" class="logo-img" alt="Dce coders logo" width="auto" height="300px">
+          
+            <h2 style="color: rgb(255, 255, 255);">
+                Welcome to Coder's Squad
+            </h2>
+            <p class="lead fs-5 fw-bold" style="color: rgb(255, 255, 255)">
+               Change the world with a click
+               </p>
+          </div>
+       <div class="d-flex align-items-center justify-content-center ">
+           <a class="btn btn-primary btn-lg" href="/main.ejs">
+                Get Started
+            </a>
+         
+       </div>
+    </div>
+
+    </div>
+            
         </body>
 
 

@@ -2,7 +2,7 @@ const express = require('express');
  var router = express.Router();
 
  router.get('/',(req,res)=>{
-	res.send("python")
+	res.sendFile(__dirname+'/pages/python.html');
  })
 
  router.get('/videos',(req,res)=>{

@@ -8,7 +8,8 @@ a{
 }
 .dce{
 	width: 100%;
-	height: 500px;
+	min-height: 500px;
+	height: auto;
     background-color:#002d59 ;
     color:white;
     display: flex;
@@ -27,6 +28,7 @@ a{
 
 .container p{
     font-size: 20px;
+	width: 80%;
 }
 .pc{
     background-color:#002d59 ;

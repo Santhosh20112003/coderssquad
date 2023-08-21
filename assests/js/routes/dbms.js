@@ -2,7 +2,7 @@ const express = require('express');
  var router = express.Router();
  
  router.get('/',(req,res)=>{
-	res.send("DBMSS")
+	res.sendFile(__dirname+'/pages/dbms.html');
  })
 
  router.get('/videos',(req,res)=>{

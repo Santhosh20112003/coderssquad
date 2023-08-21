@@ -2,7 +2,7 @@ const express = require('express');
  var router = express.Router();
  
  router.get('/',(req,res)=>{
-	res.send("Java")
+	 res.sendFile(__dirname+'/pages/java.html');
  })
 
  router.get('/videos',(req,res)=>{
@@ -17,4 +17,6 @@ const express = require('express');
 	res.send("JAVA EXAMPLES");
  })
 
+
+ 
  module.exports = router;
