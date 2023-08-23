@@ -4,36 +4,9 @@
         <title>DCE CODER SQUAD</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-        <link rel="shortcut icon" href="../assests/img/logo.png" type="image/x-icon">
-
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-            *{
-                font-family: 'Josefin Sans', sans-serif;
-            }
-            body{
-                
-                height: 100vh;
-                
-            }
-            #preloader{
-	height: 100vh;
-	width: 100%;
-	position: fixed;
-	z-index: 100;
-	background: #101010 url("https://i.pinimg.com/originals/05/cb/41/05cb41dd40c1045ef47ee2be34147c79.gif") no-repeat center center;
-	background-size: 20%;
-           }
-
-    @media (min-width:320px) and (max-width:480px) {
-        .logo-img{
-            height: 80%;
-            width: 80%;
-        }
-    }
-
-
-        </style>   
+        <link rel="shortcut icon" href="/img/logo-2.png" type="image/x-icon">
+       
+        <link rel="stylesheet" href="css/index.css"> 
     </head>
     
         <body>
@@ -46,47 +19,41 @@
 
         <nav class="navbar" style="min-height:5vh;background-color: #212121;">
             <div class="container-fluid">
+
               <a class="navbar-brand text-white" href="#">
+                
                 Coders Squad
               </a>
-              <div class="navbar-text">
-                <a href="/main" class="btn btn-info">Login</a>
-                <a href="/main" class="btn btn-outline-primary">Signup</a>
+              <div class="navbar-text gap-3">
+                <a href="/login" class="btn-login btn" >Login</a> 
+                <a href="/signup" class="ms-2 btn-signup btn">Signup</a>
             </div>
             </div>
           </nav>
-<div class="d-flex align-items-center justify-content-center flex-column gap-3" style="height: 90vh;background: #63c29c;">             
-<div class="d-flex gap-2 align-items-center justify-content-center flex-column" >       
-     <img src="/img/logo.png" class="logo-img" alt="Dce coders logo" width="auto" height="300px">
-          
-            <h2 style="color: rgb(255, 255, 255);">
-                Welcome to Coder's Squad
-            </h2>
-            <p class="lead fs-5 fw-bold" style="color: rgb(255, 255, 255)">
-               Change the world with a click
-               </p>
-          </div>
-       <div class="d-flex align-items-center justify-content-center ">
-           <a class="btn btn-primary btn-lg" href="/main.ejs">
-                Get Started
-            </a>
+<div class="d-flex align-items-center hero-box  justify-content-evenly  gap-3" style="height: 90vh;background: #63c29c;">             
+    <div class="d-flex align-items-center justify-center flex-column">
+        <img src="img/logo.png" style="width: 200px; height: 200px;" alt="logo">
+        <span class="align-items-center d-flex flex-column justify-content-center gap-0" >
+            <h1 class="text-white" style="font-size: 48px;text-shadow: 0 0 10px #212121a1;" >CODER'S SQUAD</h1>
+        <p class="lead" ></p>
+        <a class="btn btn-dark btn-lg" href="/main" >Get Started</a>
+        </span>
+    </div>
+    <span class="illustartion">
          
-       </div>
-    </div>
+        <object height="500px" width="500px" id="my-svg" type="image/svg+xml" data="img/main-ani.svg"></object>
+    </span>
 
     </div>
-            
-        </body>
 
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" integrity="sha512-zKaK6G2LZC5YZTX0vKmD7xOwd1zrEEMal4zlTf5Ved/A1RrnW+qt8pWDfo7oz+xeChECS/P9dv6EDwwPwelFfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" integrity="sha512-zKaK6G2LZC5YZTX0vKmD7xOwd1zrEEMal4zlTf5Ved/A1RrnW+qt8pWDfo7oz+xeChECS/P9dv6EDwwPwelFfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
             var loader = document.getElementById("preloader");
 	 addEventListener('load',()=>{
 		loader.style.display ='none';
 	 });
         </script>
+
     
         <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
         <script src="/index.js"></script>
@@ -114,5 +81,13 @@
             </script>
           
 
-</html>
+<script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+<script>
+    new Vivus('my-svg', { duration: 200 }, myCallback);
+  </script>
+        </body>
+
+
+
+    </html>
 
