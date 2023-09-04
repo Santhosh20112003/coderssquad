@@ -33,7 +33,7 @@
 		<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/A74TOX803D0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	</span>
 	<span class="w-100  h-[50%] md:h-[50%]  bg-fuchsia-500"> 
-		  
+		  <iframe class="w-[100%] h-[100%]" src="https://chat.openai.com/share/15604aff-48e2-4ee6-b826-e501b202871a" frameborder="0"></iframe>
 	</span>
 </div>	
 <div class="w-100 md:items-center md:justify-center bg-slate-900 hidden md:flex md:w-[40%] h-100">
@@ -41,6 +41,25 @@
 </div>
 
 
+<script>
+	(function (w, d, s, o, f, js, fjs) {
+	  w["botsonic_widget"] = o;
+	  w[o] =
+		w[o] ||
+		function () {
+		  (w[o].q = w[o].q || []).push(arguments);
+		};
+	  (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+	  js.id = o;
+	  js.src = f;
+	  js.async = 1;
+	  fjs.parentNode.insertBefore(js, fjs);
+	})(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+	Botsonic("init", {
+	  serviceBaseUrl: "https://api.botsonic.ai",
+	  token: "fd6906fe-bf16-4fb6-9504-74b1ed904fe6",
+	});
+  </script>
 
 
 </body>

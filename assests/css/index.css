@@ -33,8 +33,3 @@
             color: #000 !important;
            }
 
-       @media (min-width:320px) and (max-width:480px) {
-        .hero-box{
-            display: none !important;
-        }
-       }

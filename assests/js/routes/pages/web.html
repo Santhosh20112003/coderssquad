@@ -14,7 +14,7 @@
 </head>
 <body class="w-100 flex h-auto md:h-[100vh] bg-[#63C29C]">	
 	<div class="w-100 hidden  capitalize md:flex-col md:items-center  md:flex bg-slate-300 md:w-[10%] h-100 ">
-		<h1 class="w-[100%] h-[120px] bg-zinc-900 flex items-center justify-center text-white"> Other Courses</h1>
+		<a href="/main" class="w-[100%] h-[120px] bg-zinc-900 flex items-center justify-center text-white">HOME</a>
         <a href="/java" class="w-[100%] text-2xl border-b-2 h-[100px] flex items-center justify-center bg-orange-500 text-black">Java</a>
 		<a href="/python" class="w-[100%] text-2xl border-b-2  h-[100px] flex items-center justify-center bg-amber-400 text-black">python</a>
 		<a href="/c" class="w-[100%] text-2xl border-b-2  h-[100px] flex items-center justify-center bg-lime-500 text-white">c</a>
@@ -47,6 +47,25 @@
 
 
 
+<script>
+	(function (w, d, s, o, f, js, fjs) {
+	  w["botsonic_widget"] = o;
+	  w[o] =
+		w[o] ||
+		function () {
+		  (w[o].q = w[o].q || []).push(arguments);
+		};
+	  (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+	  js.id = o;
+	  js.src = f;
+	  js.async = 1;
+	  fjs.parentNode.insertBefore(js, fjs);
+	})(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+	Botsonic("init", {
+	  serviceBaseUrl: "https://api.botsonic.ai",
+	  token: "fd6906fe-bf16-4fb6-9504-74b1ed904fe6",
+	});
+  </script>
 
 </body>
 </html>

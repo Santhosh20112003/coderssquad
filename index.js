@@ -29,8 +29,18 @@ app.get('/main',requiresAuth(),(req,res)=>{
     title: 'Profile page'
   });
 })
+
 app.get('/about',requiresAuth(),(req,res)=>{
-  res.sendFile(__dirname+'/views/about.html');
+  
+  res.render(__dirname+'/views/about',{
+    userProfile: req.oidc.user,
+    title: 'About page'
+  });
+})
+
+
+app.get('/courses',requiresAuth(),(req,res)=>{
+  res.sendFile(__dirname+'/views/courses.html');
 });
 
  app.use(express.static('assests'));

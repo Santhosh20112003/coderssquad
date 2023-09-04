@@ -32,11 +32,11 @@
 </head>
 <body>
 
-		<div id="toastElement" class="toast" role="alert"  style="z-index: 100;position: fixed;top:17%;right: 10px;">
+		<div id="toastElement" class="toast" role="alert"  style="z-index: 100;position: fixed;top:35%;right: 10px;">
 		<div class="toast-header align-items-center justify-content-between px-3">
 			<div class=" d-flex align-items-center jusify-content-center gap-3">
 				<img src="/img/logo.png" height="50" width="50" alt="">
-			<p class="h3 mt-2">Hello There !!</p>
+			<p class="h3 mt-2">Welcome Folks</p>
 			</div>
 			<button class="btn-close" data-bs-dismiss="toast"></button>
 		</div>
@@ -51,9 +51,9 @@
 			<img id="image" src="/img/menu.png" alt="">
 		</span> 
 
-		<span  id="icon" class="upbtn d-flex align-items-center justify-content-center"  style="width: 60px;height: 60px;border-radius: 50%;position: fixed;bottom: 100px;right: 25px;background-color: #41d399;z-index: 10;" title="click to join our squad">
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLScRAdBYuFAYxUYyypmR0DeRMBkD_-AR9OpNyeO_S_KOr3uWpQ/viewform?usp=sf_link" id="icon" class="upbtn d-flex align-items-center justify-content-center"  style="width: 60px;height: 60px;border-radius: 50%;position: fixed;bottom: 100px;right: 25px;background-color: #41d399;z-index: 10;" title="click to join our squad">
 			<i class="fas fa-user-plus" style="transform: scale(1.5);color: #fff;"></i>
-		</span>
+		</a>
 
 <div class="popup" id="popup"  >
 
@@ -92,14 +92,38 @@
 
 </header>
 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h1 class="modal-title fs-5" id="exampleModalLabel"> Profile Information</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body d-flex align-items-center justify-content-evenly">
+		 <span>
+			<img class="rounded" src="<%= userProfile.picture %>" width="100px" height="100px" alt="">
+		 </span>
+		 <span class="d-block">
+			<h3 class="uk-text-capitalize"><%= userProfile.nickname %></h1>
+			<h6 class="text-lead text-medium"><%= userProfile.email %></h5>
+			<p class="text-lead" style="font-size: 12px;">Last entry <%= userProfile.updated_at %></p>
+		 </span>
+		</div>
+		
+	  </div>
+	</div>
+  </div>
+
 <header class="text-center align-items-center justify-content-center greet "  id="toast">
 	<span class="align-items-center pt-3 gap-2 justify-content-between d-flex" >
 		<p id="greeting"></p>
 	<p>folks , Welcome to Coder's Squad of <a href="https://dce.edu.in/" style="color: #002d59;">Dhanalakshmi College of Engineering</a> </p>
 	</span>
-	<button class="btn btn-close " style="position: fixed; top: 7px;right: 10px;" id="close"  ></button>
+	
 </header>
-	<nav class="navbar p-3 w-100 d-flex">
+	<nav class="navbar p-3 w-100 d-flex" >
       <span class="d-flex w-30 align-items-center">
 		<span class="logo w-20">
 			<img src="/img/logo.png" width="80px" height="80px" alt="">
@@ -137,7 +161,7 @@
 					<button type="button" class="btn text-white fs-4 dropdown-toggler" data-bs-toggle="dropdown" >
 					 CONTACT
 					</button>
-					<form class="dropdown-menu p-4">
+					<form action="window.alert('SuccessFully Received')" class="dropdown-menu p-4">
 					  <div class="dropdown-header text-dark fw-bold fs-3">Contact Form</div>
 					  <div class="mb-3">
 						<label for="exampleDropdownFormPassword2" class="form-label">Name</label>
@@ -230,16 +254,22 @@
 		  <a href="https://twitter.com/dce_edu"><i class="fab fa-twitter fa-2x"  style="color: #fff;"></i></a>
 		</span>
 		<span class="d-flex align-items-center justify-content-center gap-3 ">
-			<a class="" href="#"><img class="desktop" src="/img/join.gif" alt="" width="100px" height="100px" style="margin-top:-20% ;"></a>
+			<a class="" href="https://docs.google.com/forms/d/e/1FAIpQLScRAdBYuFAYxUYyypmR0DeRMBkD_-AR9OpNyeO_S_KOr3uWpQ/viewform?usp=sf_link"><img class="desktop" src="/img/join.gif" alt="" width="100px" height="100px" style="margin-top:-20% ;"></a>
 			<div class="dropdown-center desktop dropstart">
-				
-					<img  src="<%= userProfile.picture %>" width="50" class="dropdown-toggler profile rounded-5" data-bs-toggle="dropdown" height="50" alt="">
+				<div class='icon-container' data-bs-toggle="dropdown">
+					<img  src="<%= userProfile.picture %>" width="50" class="dropdown-toggler img profile rounded-5"  height="50" alt="">
+					<div class='status-circle'>
+					</div>
+				  </div>
+					
 					
 				
 				
-				<ul class="dropdown-menu" style="margin-top: 70px;">
-				  <li class="dropdown-item ">Profile</li>
-				  <li class="dropdown-item">About</li>
+				<ul class="dropdown-menu" style="margin-top: 60px;margin-right: -20px;">
+					<button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+						profile
+					  </button>
+				  
 				<a style="text-decoration: none;" href="/logout"><li class="dropdown-item">Log out</li></a>
 				  
 				</ul>
@@ -337,14 +367,16 @@
  <span class="courses_content d-flex align-items-center justify-content-center flex-column ms-3" style="width: 40%;">
    <h1 class="display-1" style="color: #002d59;">Courses</h1>
    <p class="text-secondary fs-5">"Your Future is Created by what you do today not <b style="text-decoration: line-through;">tomorrow</b>"</p>
-   <button class="btn btn-primary btn-lg">Start Learning</button>
+   <a href="/courses" class="btn btn-primary btn-lg">Start Learning</a>
  </span>
  <span class="courses_img d-flex align-items-center justify-content-center" style="width: 60%;" >
 	<img src="/img/laptop.svg" width="100%" height="100%"  alt="">
  </span>
 </section>
 
+
 <section class="d-flex cards align-items-center justify-content-around flex-wrap gap-4 w-100 py-5">
+	
 	<div class="card mb-3" style="max-width: 540px;">
 		 	<div class="row g-0">
 		  <div class="col-md-4" style="background-image: url(/img/htmlcssjs.png);
@@ -593,6 +625,7 @@ close.onclick = function (){
     toast.style.display = "none";
 }
 
+
 	
 	
 let toastelement = document.getElementById('toastElement');
@@ -604,6 +637,8 @@ window.addEventListener('load',()=>{
 	toast.close();
  })
 })
+
+
 let online = document.getElementById('online');
 
 let offline = document.getElementById('offline');

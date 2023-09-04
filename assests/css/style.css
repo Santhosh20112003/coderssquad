@@ -32,17 +32,16 @@ body{
 .navbar{
 width: 100%;
 height: 120px;	
-background-color: #1079e1;	
-/* border-bottom: 10px solid #ffcc00; */
+background-image: linear-gradient( 132.6deg,  #478bd6 23.3%, #25d8d3 84.7% );
 }
 .nav-link{
 	text-transform: uppercase;
 }
 .dropdown-menu{
-	background-color: #ecc940 !important;
+	background-color: #fff !important;
 }
 .dropdown-item:hover{
-	background-color: #1079e1 !important;
+	background-color: #212121 !important;
 	color: #fff !important;
 }
 .greet{
@@ -530,3 +529,25 @@ h2{
 	}
   }
 
+  .icon-container {
+	width: 50px;
+	height: 50px;
+	position: relative;
+  }
+  
+  .img {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+  }
+  
+  .status-circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #07da63;
+	border: 2px solid white;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+  }
